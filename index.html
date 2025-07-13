@@ -20,3 +20,22 @@
     <script src="script.js"></script>
 </body>
 </html>
+<section id="pedido">
+  <h2>📦 Hacer un Pedido</h2>
+  <form id="form-pedido">
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="tel" name="telefono" placeholder="Número de teléfono" required>
+    <input type="text" name="direccion" placeholder="Dirección de entrega" required>
+    <textarea name="detalle" placeholder="¿Qué desea pedir?" rows="4" required></textarea>
+
+    <select name="pago" required>
+      <option value="" disabled selected>Método de pago</option>
+      <option value="efectivo">Efectivo</option>
+      <option value="sinpe">SINPE Móvil</option>
+      <option value="stripe">Stripe</option>
+    </select>
+
+    <button type="submit">Confirmar Pedido</button>
+  </form>
+  <p id="mensaje-exito" style="display:none; color: green; margin-top: 10px;">✅ Pedido enviado correctamente.</p>
+</section>
