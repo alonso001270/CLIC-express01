@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clic Express - Carrito</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a Clic Express</h1>
+    <button onclick="hacerPedido()">Hacer Pedido</button>
+  </header>
+
+  <main>
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="producto">
+        <p>Hamburguesa</p>
+        <p>₡3500</p>
+        <button onclick="agregarAlCarrito('Hamburguesa', 3500)">Agregar</button>
+      </div>
+      <div class="producto">
+        <p>Pizza</p>
+        <p>₡4500</p>
+        <button onclick="agregarAlCarrito('Pizza', 4500)">Agregar</button>
+      </div>
+    </section>
+
+    <section id="carrito">
+      <h2>🛒 Carrito de Compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="total">Total: ₡0</p>
+      <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </section>
+
+    <section id="formulario">
+      <h2>📦 Hacer Pedido</h2>
+      <form onsubmit="return enviarFormulario(event)">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="tel" id="telefono" placeholder="Número de teléfono" required />
+        <textarea id="pedido" placeholder="¿Qué desea pedir?" required></textarea>
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
