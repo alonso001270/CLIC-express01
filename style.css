@@ -21,3 +21,45 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+#pedido {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#pedido h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+#form-pedido {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#form-pedido input,
+#form-pedido textarea,
+#form-pedido select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#form-pedido button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form-pedido button:hover {
+  background-color: #e65c00;
+}
