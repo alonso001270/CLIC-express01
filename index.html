@@ -36,6 +36,13 @@
     </select>
 
     <button type="submit">Confirmar Pedido</button>
-  </form>
+  </form> <div id="resumen-pedido" style="display: none; text-align: left; background: #f9f9f9; padding: 15px; margin-top: 20px; border-radius: 5px;">
+  <h3>📝 Resumen del pedido:</h3>
+  <p><strong>Nombre:</strong> <span id="res-nombre"></span></p>
+  <p><strong>Teléfono:</strong> <span id="res-telefono"></span></p>
+  <p><strong>Dirección:</strong> <span id="res-direccion"></span></p>
+  <p><strong>Pedido:</strong> <span id="res-detalle"></span></p>
+  <p><strong>Pago:</strong> <span id="res-pago"></span></p>
+</div>
   <p id="mensaje-exito" style="display:none; color: green; margin-top: 10px;">✅ Pedido enviado correctamente.</p>
 </section>
