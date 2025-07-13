@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clic Express</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a Clic Express</h1>
+    <button onclick="mostrarFormulario()">Hacer Pedido</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Explorar Comercios</h2>
+      <div class="categorias">
+        <div class="categoria" onclick="seleccionarCategoria('Comida rápida')">
+          <img src="imagenes/comida.png" alt="Comida rápida" />
+          <p>Comida rápida</p>
+        </div>
+        <div class="categoria" onclick="seleccionarCategoria('Panadería')">
+          <img src="imagenes/panaderia.png" alt="Panadería" />
+          <p>Panadería</p>
+        </div>
+        <div class="categoria" onclick="seleccionarCategoria('Supermercados')">
+          <img src="imagenes/supermercado.png" alt="Supermercados" />
+          <p>Supermercados</p>
+        </div>
+      </div>
+      <p>Comida, panadería, supermercados y más.</p>
+    </section>
+
+    <section id="formulario">
+      <h3>📦 Hacer un Pedido</h3>
+      <form onsubmit="enviarPedido(event)">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="tel" id="telefono" placeholder="Número de teléfono" required />
+        <input type="text" id="direccion" placeholder="Dirección de entrega" required />
+        <textarea id="pedido" placeholder="¿Qué desea pedir?" required></textarea>
+        <select id="pago" required>
+          <option value="">Método de pago</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="sinpe">SINPE Móvil</option>
+          <option value="raya">Raya</option>
+        </select>
+        <button type="submit">Confirmar Pedido</button>
+      </form>
+
+      <div id="resumen" style="display:none;">
+        <h3>📄 Resumen del pedido:</h3>
+        <p><strong>Nombre:</strong> <span id="res-nombre"></span></p>
+        <p><strong>Teléfono:</strong> <span id="res-telefono"></span></p>
+        <p><strong>Dirección:</strong> <span id="res-direccion"></span></p>
+        <p><strong>Pedido:</strong> <span id="res-pedido"></span></p>
+        <p><strong>Pago:</strong> <span id="res-pago"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
