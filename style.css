@@ -63,3 +63,6 @@ button {
 #form-pedido button:hover {
   background-color: #e65c00;
 }
+#resumen-pedido p {
+  margin: 5px 0;
+}
